@@ -46,6 +46,8 @@ RUN \
 # 此阶段创建最终的、精简的运行镜像。
 FROM alpine:latest
 
+LABEL org.opencontainers.image.source="https://github.com/vernesong/mihomo"
+
 RUN apk add --no-cache ca-certificates tzdata iptables
 
 VOLUME ["/root/.config/mihomo/"]
