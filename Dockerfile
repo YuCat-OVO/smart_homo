@@ -7,7 +7,7 @@ ARG TAG="Prerelease-Alpha"
 
 RUN apk add --no-cache curl jq ca-certificates
 
-WORKDIR /app
+WORKDIR /mihomo
 
 RUN \
     # --- 下载并准备 Mihomo 二进制文件 ---
