@@ -60,7 +60,9 @@ jobs:
           images: |
             ${{ env.DOCKERHUB_SLUG }}
             ${{ env.GHCR_SLUG }}
-          tags: latest
+          tags: |
+            type=raw,value=latest
+            type=schedule,pattern={{date 'YYYYMMDD-HHmmss' tz='Asia/Shanghai'}}
 
       # 构建多架构镜像并推送到 DockerHub 和 GHCR
       - name: Build and push Docker image
